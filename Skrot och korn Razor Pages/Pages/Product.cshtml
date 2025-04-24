@@ -45,22 +45,21 @@
     <p>50 ton</p>
     <p>15 ton</p>
 
-    <h3>
-        köp 
-        <input class="main__productpage__container__checkbox checkbox1" type="checkbox" name="Grävskopa" value="200000"
-               id="checkbox1">
-    </h3>
-    <h3>
-        köp 
-        <input class="main__productpage__container__checkbox" type="checkbox" name="Lyftkran" value="500000"
-               id="checkbox2">
-    </h3>
-    <h3>
-        köp 
-        <input class="main__productpage__container__checkbox" type="checkbox" name="Lastbil" value="700000"
-               id="checkbox3">
-    </h3>
 
-    <h2 class="price" id="price">Priset av valda fordon 0kr</h2>
+    <form method="post">
+
+        <label asp-for="@Model.Vehicle1">Köp grävskopa</label>
+        <input asp-for="@Model.Vehicle1">
+
+        <label asp-for="@Model.Vehicle2">Köp lyftkran</label>
+        <input asp-for="@Model.Vehicle2">
+
+        <label asp-for="@Model.Vehicle3">köp lastbil</label>
+        <input asp-for="@Model.Vehicle3">
+
+        <input type="submit" />
+
+    </form>
+    <h2>Priset av valda fordon @Model.Price kr</h2>
 
 </div>
