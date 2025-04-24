@@ -20,3 +20,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.productpage__container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto repeat(9, 1fr) min-content auto;
+    justify-content: center;
+    align-items: center;
+}
